@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../images/logo.svg';
 import PingPongButton from '../PingPongButton';
 
-function App() {
+function Home() {
+
+  const [text, setText] = useState(null)
 
   return (
     <div className="App">
@@ -12,11 +14,13 @@ function App() {
           Edit <code>src/components/App/App.tsx</code> and save to reload.
         </p>
 
-        <PingPongButton onPong={text => alert(text)} />
+        <PingPongButton onPong={text => setText(text)} onClick={() => setText(null)}/>
+
+        {text && <p>{text}</p>}
 
       </header>
     </div>
   );
 }
 
-export default App;
+export default Home;

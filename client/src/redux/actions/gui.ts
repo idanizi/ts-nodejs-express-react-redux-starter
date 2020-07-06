@@ -2,7 +2,7 @@ import { ActionCreator } from "../../models"
 
 export const SET_LOADING = 'SET_LOADING'
 
-export const setIsLoading: ActionCreator<string> = (payload) => ({
+export const setLoading: ActionCreator<boolean> = (payload) => ({
     type: SET_LOADING,
     payload
 })

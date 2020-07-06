@@ -2,7 +2,7 @@ import {Dispatch} from 'redux'
 import { userInfo } from 'os'
 import { gunzip } from 'zlib'
 
-export type FluxActionType<T> = {
+export type FluxActionType<T = any> = {
     type: string,
     payload: T,
     meta?: any,
