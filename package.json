@@ -4,11 +4,15 @@
   "description": "typescript nodeJS boilerplate for starting server side project",
   "main": "build/index.js",
   "scripts": {
-    "test": "jest",
-    "build": "tsc -p .",
+    "dev-client": "yarn --cwd=client start",
+    "build-client": "yarn --cwd=client build",
+    "copy-client": "mkdir -p build/client && cp -r client/build build/client",
+    "build-server": "tsc -p .",
     "clean": "rm -r build",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
-    "prestart": "npm run build",
+    "dev-server": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "run-s build-server build-client copy-client",
+    "prestart": "run-s clean build",
+    "test": "jest",
     "start": "node build/index.js"
   },
   "keywords": [],
@@ -18,7 +22,8 @@
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
