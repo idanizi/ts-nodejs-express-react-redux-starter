@@ -26,7 +26,13 @@ function loadEnvironments() {
 }
 
 function loadConfig() {
-
+    const port = parseInt(process.env.PORT) || 8080
+    const client_build_path = 'client/build'
+    
+    return {
+        port,
+        client_build_path,
+    }
 }
 
 loadEnvironments();
