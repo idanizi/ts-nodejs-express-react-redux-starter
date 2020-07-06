@@ -6,6 +6,7 @@
   "scripts": {
     "version": "node scripts/versions.js && git add .",
     "postversion": "git push --tags && git push --all",
+    "postinstall": "yarn --cwd=client install",
     "dev-client": "yarn --cwd=client start",
     "build-client": "yarn --cwd=client build",
     "copy-client": "mkdir -p build/client && cp -r client/build build/client",
