@@ -1,0 +1,31 @@
+{
+  "name": "ts-nodejs-express-react-redux-starter",
+  "version": "1.0.0",
+  "description": "typescript nodeJS boilerplate for starting server side project",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc -p .",
+    "clean": "rm -r build",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "prestart": "npm run build",
+    "start": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "Idan Izicovich <idanizi@gmail.com> <https://www.idanizi.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.8",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  }
+}
