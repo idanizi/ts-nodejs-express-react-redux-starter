@@ -1,6 +1,6 @@
 {
   "name": "ts-nodejs-express-react-redux-starter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Typescript, Node, React boilerplate for starting full-stack application project",
   "main": "build/index.js",
   "scripts": {
