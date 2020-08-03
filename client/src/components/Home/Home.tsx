@@ -11,7 +11,7 @@ function Home() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/components/App/App.tsx</code> and save to reload.
+          Edit <code>client/src/components/Home/Home.tsx</code> and save to reload.
         </p>
 
         <PingPongButton onPong={text => setText(text)} onClick={() => setText(null)}/>

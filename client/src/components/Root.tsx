@@ -6,7 +6,8 @@ import store from '../redux/store'
 import { ConnectedRouter } from 'connected-react-router'
 import history from '../redux/store/history'
 import routes from '../routes'
-import NotFound from './NotFound'
+import PageNotFound from './PageNotFound'
+import App from './App'
 
 
 export default function Root() {
@@ -14,10 +15,12 @@ export default function Root() {
         <Provider store={store}>
             <ConnectedRouter history={history}>
                 <Router>
-                    <Switch>
-                        <Route exact path={routes.HOME} component={Home}/>
-                        <Route path="*" component={NotFound} />
-                    </Switch>
+                    <App>
+                        <Switch>
+                            <Route exact path={routes.HOME} component={Home} />
+                            <Route path="*" component={PageNotFound} />
+                        </Switch>
+                    </App>
                 </Router>
             </ConnectedRouter>
         </Provider>

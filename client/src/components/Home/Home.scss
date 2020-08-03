@@ -1,3 +1,5 @@
+@import '../../colors.scss';
+
 .App {
   text-align: center;
 }
@@ -14,7 +16,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +26,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: $light-aqua;
 }
 
 @keyframes App-logo-spin {
